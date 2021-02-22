@@ -1,15 +1,9 @@
- #This is a basic workflow to help you get started with Actions
+name: Deploy
 
- name: Bootcamp_2020 
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
-
- on:
+on:
   push:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,5 +26,5 @@ jobs:
       run: npm install -g surge
       
     - name: Deploy to Surge
-       run: surge ./ wasteful-paint.surge.sh --token ${{ secrets.SURGE_TOKEN}}
+      run: surge ./ wasteful-paint.surge.sh --token ${{ secrets.SURGE_TOKEN}}
 #      
