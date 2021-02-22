@@ -32,4 +32,4 @@ jobs:
       run: npm install --global surge
  
     - name: deplying surge
-      run: surge ./ long-volcano.surge.sh --token ${{ secrets.SURGE_TOKEN}}
+      run: surge ./ wasteful-paint.surge.sh --token ${{ secrets.SURGE_TOKEN}}
